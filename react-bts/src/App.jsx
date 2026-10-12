@@ -1,37 +1,31 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import Counter from './components/Counter/Counter.jsx';
-import Header from './components/Header.jsx';
-import { log } from './log.js';
-
+import Counter from "./components/Counter/Counter.jsx";
+import Header from "./components/Header.jsx";
+import { log } from "./log.js";
+import { ConfigureCounter } from "./components/Counter/ConfigureCounter.jsx";
+// million-ignore
 function App() {
-  log('<App /> rendered');
-
-  const [enteredNumber, setEnteredNumber] = useState(0);
+  log("<App /> rendered");
   const [chosenCount, setChosenCount] = useState(0);
-
-  function handleChange(event) {
-    setEnteredNumber(+event.target.value);
-  }
-
-  function handleSetClick() {
-    setChosenCount(enteredNumber);
-    setEnteredNumber(0);
+  function handleSetCount(newCount) {
+    setChosenCount(newCount);
+    // setChosenCount((prevCount)=>prevCount+1); 
+    // above is to ecplain the state batching
   }
 
   return (
     <>
       <Header />
       <main>
-        <section id="configure-counter">
-          <h2>Set Counter</h2>
-          <input type="number" onChange={handleChange} value={enteredNumber} />
-          <button onClick={handleSetClick}>Set</button>
-        </section>
-        <Counter initialCount={chosenCount} />
+        <ConfigureCounter onSet={handleSetCount}/>
+        <Counter key={chosenCount} initialCount={chosenCount} />
+        <Counter initialCount={0}/>
       </main>
     </>
   );
 }
 
 export default App;
+
+// millionjs is used to make faster ad optimized
