@@ -1,6 +1,27 @@
 {
   "opinions": [
     {
+      "id": 1792433067427,
+      "votes": 0,
+      "userName": "SANKET SHARNAPPA KURLE",
+      "title": "tudying anything is interesting as long as its challenging   0",
+      "body": "lets study"
+    },
+    {
+      "id": 1792432381351,
+      "votes": 2,
+      "userName": "SANKET SHARNAPPA KURLE",
+      "title": "lets study",
+      "body": "studying anything is interesting as long as its challenging\n\n\n"
+    },
+    {
+      "id": 1792432350244,
+      "votes": 0,
+      "userName": "sanket ",
+      "title": "lets study ",
+      "body": "studying anything is interesting as long as its challenging\n"
+    },
+    {
       "id": 1,
       "userName": "Maximilian Schwarzmüller",
       "title": "Do yourself a favor and learn React!",
